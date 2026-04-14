@@ -47,7 +47,7 @@ with st.sidebar:
 
 # --- 4. CORE LOGIC ---
 if access_key == "EXPERT-2026": # Match this to your E-book key
-    uploaded_file = st.file_uploader("Upload Shipping Document (PDF)", type="pdf")
+   uploaded_files = st.file_uploader("Upload shipping documents (PDF)", type=["pdf"], accept_multiple_files=True)
 
     if uploaded_file and st.button("Run Global Audit"):
         with st.spinner("Analyzing document against global trade standards..."):
